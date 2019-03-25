@@ -15,24 +15,24 @@ So how to read the dashboard? Users will be able to select an area on the map as
 ## Data Insights 
 With the taxi ride data in New York City 2016 and the dashboard provided above, taxi riders will be able to estimate the trip durations to JFK airport during certain time of the day and how many taxis are available around. Following interesting recommendations can be provided by this dashboard:
 
-**1. It is very hard for people to find a vacant taxi during time periods from 5:00 am to 9:00 am and from 4:00 pm to 6:00 pm in NYC, probably because of the rush hour.
+**1. It is very hard for people to find a vacant taxi during time periods from 5:00 am to 9:00 am and from 4:00 pm to 6:00 pm in NYC, probably because of the rush hour.**
 
 Generally speaking, the busiest hours for taxi drivers in NYC is during these two time periods. The demands of taxi are much higher than supplies, with 7:00 am and 5:00 pm being the peak hours in the city. There are almost no vacant taxi available for riders during these two time periods, hence taxi is not the best way to commute during the rush hours in NYC.
 
-**2. Travelers should avoid traveling to JFK from central park around 3:00 pm to 5:00 pm.
+**2. Travelers should avoid traveling to JFK from central park around 3:00 pm to 5:00 pm.**
 
 According to year 2016 data, it takes longer time to travel from the central park to JFK airport during the late afternoon (from 3:00 pm to 5:00 pm) than other time in a day. The trip duration ranges from 50 min to one and a half hours which might result in a fat bill as the meter will remain counting even you are stuck in traffic. Taxi availability during this time period is very low, and the demands usually exceed the supplies. Hence there is a high possibility that travelers cannot find any available taxi during this time period.
 
-**3. Taxi availabilities are usually low at Manhattan and downtown NYC area.
+**3. Taxi availabilities are usually low at Manhattan and downtown NYC area.**
 
 For most time of the day, more people were picked up than being dropped off in the Lower Manhattan and downtown NYC area, indicating few vacant cars (disregarding vacant taxis cruising in the city). On the other hand, the situation is much better in upper Manhattan area. Usually there are more vacant taxi in the Upper Manhattan area, and the average travel time to JFK is around 40 minutes, much less time compared with starting from Lower Manhattan.
 
 ## Design Choices 
-**1. Interact with the map to choose pick-up location
+**1. Interact with the map to choose pick-up location**
 
 NYC taxi dataset describes completed trips, with which we could have delivered descriptive analysis of taxi trips in NYC, but instead of presenting static stories, we want users to be able to interact with the map and choose the pick-up location. When user selects an area manually on the map, the map will act as a filter for the other graphs. By interacting with the map, user can focus on areas of interests and get an idea of the traffic condition of a taxi trip to JFK airport. 
 
-**2. Demonstrate number of vacant taxis
+**2. Demonstrate number of vacant taxis**
 Waiting for a long time without seeing a vacant taxi is very frustrating, so when designing the chart, we thought it would be very helpful if we were able to estimate how likely users can find a available taxi. The likelihood to find vacant taxi is defined by the number of drop-off taxis minus number of pick-up taxis, within user-selected area. In order to do so, the original dataset is split into two sets of data with timestamps and location coordinates: pick-up data set and drop-off data set. When a user selects a certain area on the map, pick-up points and drop-off points within that area will be aggregated hourly. By comparing the demands and supplies of taxi information that is demonstrated in the line chart, user can get an intuitive idea of the taxis’ availability condition within a day.  
 
 **3. Estimate trip time with confidence bands**
