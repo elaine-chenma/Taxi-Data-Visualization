@@ -43,8 +43,8 @@ We considered using a bar chart or line chart to present average trip time to us
 As we mentioned above, we deliberately ignored the existing vacant taxis which are already cruising in the city due to lack of information. We plan to gather data on NYC taxi vacancy rates for each area in different time ranges within a day. With these data, our team will be able to estimate the probability of a passenger getting a taxi ride in selected area more accurately.
 
 ### Reference
-*Dataset: https://data.cityofnewyork.us/Transportation/2016-Green-Taxi-Trip-Data/hvrh-b6nb/data *
+*Dataset: https://data.cityofnewyork.us/Transportation/2016-Green-Taxi-Trip-Data/hvrh-b6nb/data*
 
-*Taxi, Uber, and Lyft Usage in New York City, by Todd W. Schneide: http://toddwschneider.com/posts/taxi-uber-lyft-usage-new-york-city/ *
+*Taxi, Uber, and Lyft Usage in New York City, by Todd W. Schneide: http://toddwschneider.com/posts/taxi-uber-lyft-usage-new-york-city/*
 
 
